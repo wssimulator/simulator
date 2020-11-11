@@ -238,9 +238,10 @@ def main():
     print("#PROCESSORS: {}, RUNS: {}".format(
         arguments.processors,
         arguments.runs))
-    print("#1:proba\t2:latency\t3:runTime\t4:processors\t5:input-work-size\t6:taskThreshold\t7:lGranularity\
-            \t8:W0\t9:W1\t10:block_factory\t11:init_task_cost\t12:waiting-time\
-            \t13:idle_time\t14:Geo_block_number\t15:init_blk_size\t16:max_blk_size\t17:IWR\t18:EWR")
+
+
+    print("#proba\tlatency\trunTime\tprocessors\tinput-work-size\
+            \ttaskThreshold\tW0\tW1\tIWR\tEWR")
 
     for work in works:
         for threshold in arguments.task_threshold:
@@ -338,29 +339,17 @@ def main():
                                 json.dump(json_data,
                                           outfile, indent=4)
 
-                        print("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\
-                              \t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}"
+                        print("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}"
                               .format(
                                   victim_selection_config,
                                   latency,
-                                  # simulator.steal_info["SIWR"],
-                                  # simulator.steal_info["SEWR"],
                                   simulator.time,
                                   arguments.processors,
                                   work,
                                   threshold,
-                                  arguments.local_granularity,
                                   simulator.steal_info["W0"],
                                   simulator.steal_info["W1"],
-                                  arguments.block_factor,
-                                  wssim.INIT_TASK_COST,
-                                  simulator.steal_info["waiting_time"],
-                                  simulator.steal_info["idle_time"],
-                                  wssim.GEO_BLK_NUMBER,
-                                  wssim.INIT_BLK_SIZE,
-                                  geo_blk_max,
                                   simulator.steal_info["IWR"],
-                                  # simulator.steal_info["beginning"]
                                   simulator.steal_info["EWR"]
                               ))
 
