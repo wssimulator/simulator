@@ -1,2 +1,2 @@
-# simulator
-the src code of the simulator
+# ws-simulator
+simulation tool for scheduling algorithms in HPC systems
