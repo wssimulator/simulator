@@ -6,7 +6,8 @@ RUN=2
 SCRIPT_D=./
 # data from simulator Directory
 SIM_D=../data/data-from-simulator/
-SIM_DATA_FILENAME=one-cluster-latency
+SIM_DATA_FILENAME=one-cluster-latency   #generic name for new simulation 
+										#if you wana use other file, you must the variable in the command line
 
 # data for boxplot Directory
 BOXP_D=../data/data-for-boxplot/
