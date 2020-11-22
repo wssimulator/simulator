@@ -1,0 +1,12 @@
+
+#configuration of platform 
+LATENCY=22
+RUN=2
+# script Directory
+SCRIPT_D=./
+# data from simulator Directory
+SIM_D=../data/data-from-simulator/
+FILENAME=one-cluster-latency
+
+# data for boxplot Directory
+BOXP_D=../data/data-for-boxplot/
